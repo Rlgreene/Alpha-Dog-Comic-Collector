@@ -22,7 +22,7 @@ class SearchNewTableViewController: UITableViewController {
                                               "text": "Moon Knight #1",
                                               "extras": "url_m",
                                               "per_page": 10]
-        manager.get("https://comicvine.gamespot.com/services/rest/", parameters: searchParameters,
+        manager.get("https://comicvine.gamespot.com/api/", parameters: searchParameters,
                     progress: nil,
                     success: { (operation: URLSessionDataTask, responseObject:Any?) in
                         if let responseObject = responseObject as? [String:AnyObject] {
