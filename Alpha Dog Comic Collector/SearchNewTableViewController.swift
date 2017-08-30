@@ -15,14 +15,14 @@ class SearchNewTableViewController: UITableViewController {
         
         let manager = AFHTTPSessionManager()
         
-        let searchParameters:[String:Any] = ["method": "comicvine.gamestop.issue.search",
+        let searchParameters:[String:Any] = ["method": "comicvine.issues.search",
                                               "api_key": "6121b778a49a69f39054e929a1b6d89d74d74e10",
                                               "format": "json",
                                               "nojsoncallback": 1,
-                                              "text": "Moon Knight",
+                                              "text": "Moon Knight #1",
                                               "extras": "url_m",
                                               "per_page": 10]
-        manager.get("https://comicvine.gamestop.com/services/rest/", parameters: searchParameters,
+        manager.get("https://comicvine.gamespot.com/services/rest/", parameters: searchParameters,
                     progress: nil,
                     success: { (operation: URLSessionDataTask, responseObject:Any?) in
                         if let responseObject = responseObject as? [String:AnyObject] {

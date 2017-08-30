@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		0E4997B71F562BE200555F6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4997B61F562BE200555F6A /* AppDelegate.swift */; };
-		0E4997B91F562BE200555F6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4997B81F562BE200555F6A /* ViewController.swift */; };
 		0E4997BC1F562BE200555F6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4997BA1F562BE200555F6A /* Main.storyboard */; };
 		0E4997BE1F562BE200555F6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4997BD1F562BE200555F6A /* Assets.xcassets */; };
 		0E4997C11F562BE200555F6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4997BF1F562BE200555F6A /* LaunchScreen.storyboard */; };
 		0E4997C91F562CF800555F6A /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0E4997C81F562CF800555F6A /* Cartfile */; };
 		0E4997CC1F562E9B00555F6A /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4997CB1F562E9B00555F6A /* AFNetworking.framework */; };
 		0E4997CE1F56310E00555F6A /* SearchNewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4997CD1F56310E00555F6A /* SearchNewTableViewController.swift */; };
-		0E4997D01F56353900555F6A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4997CF1F56353900555F6A /* Default-568h@2x.png */; };
+		0E4997D21F57027500555F6A /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4997CB1F562E9B00555F6A /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E4997D31F57027500555F6A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0E4997D21F57027500555F6A /* AFNetworking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E4997B31F562BE200555F6A /* Alpha Dog Comic Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpha Dog Comic Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4997B61F562BE200555F6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E4997B81F562BE200555F6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E4997BB1F562BE200555F6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E4997BD1F562BE200555F6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E4997C01F562BE200555F6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,7 +42,6 @@
 		0E4997CA1F562D2400555F6A /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		0E4997CB1F562E9B00555F6A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = "<group>"; };
 		0E4997CD1F56310E00555F6A /* SearchNewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNewTableViewController.swift; sourceTree = "<group>"; };
-		0E4997CF1F56353900555F6A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,10 +59,9 @@
 		0E4997AA1F562BE200555F6A = {
 			isa = PBXGroup;
 			children = (
-				0E4997CF1F56353900555F6A /* Default-568h@2x.png */,
-				0E4997C81F562CF800555F6A /* Cartfile */,
 				0E4997CA1F562D2400555F6A /* bridge.h */,
 				0E4997CB1F562E9B00555F6A /* AFNetworking.framework */,
+				0E4997C81F562CF800555F6A /* Cartfile */,
 				0E4997B51F562BE200555F6A /* Alpha Dog Comic Collector */,
 				0E4997B41F562BE200555F6A /* Products */,
 			);
@@ -69,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				0E4997B61F562BE200555F6A /* AppDelegate.swift */,
-				0E4997B81F562BE200555F6A /* ViewController.swift */,
 				0E4997CD1F56310E00555F6A /* SearchNewTableViewController.swift */,
 				0E4997BA1F562BE200555F6A /* Main.storyboard */,
 				0E4997BF1F562BE200555F6A /* LaunchScreen.storyboard */,
@@ -89,6 +98,7 @@
 				0E4997AF1F562BE200555F6A /* Sources */,
 				0E4997B01F562BE200555F6A /* Frameworks */,
 				0E4997B11F562BE200555F6A /* Resources */,
+				0E4997D31F57027500555F6A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,7 +152,6 @@
 				0E4997C11F562BE200555F6A /* LaunchScreen.storyboard in Resources */,
 				0E4997BE1F562BE200555F6A /* Assets.xcassets in Resources */,
 				0E4997C91F562CF800555F6A /* Cartfile in Resources */,
-				0E4997D01F56353900555F6A /* Default-568h@2x.png in Resources */,
 				0E4997BC1F562BE200555F6A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,7 +164,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4997CE1F56310E00555F6A /* SearchNewTableViewController.swift in Sources */,
-				0E4997B91F562BE200555F6A /* ViewController.swift in Sources */,
 				0E4997B71F562BE200555F6A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +215,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -258,6 +267,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -281,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V9843VC6X4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = V9843VC6X4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

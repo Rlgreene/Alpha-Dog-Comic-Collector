@@ -20,7 +20,7 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UILaunchStoryboardName</key>
+    <key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
@@ -31,6 +31,8 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -43,16 +45,9 @@
     <dict>
         <key>NSExceptionDomains</key>
         <dict>
-            <key>akamaihd.net</key>
+            <key>api.comicvine.com</key>
             <dict>
                 <key>NSExceptionAllowsInsecureHTTPLoads</key>
-                <true/>
-                <key>NSIncludesSubdomains</key>
-                <true/>
-            <dict>
-            <key>api.comicvine.gamestop.com</key>
-            <dict>
-                <key>NSExceptionAllowsInsecuteHTTPLoads</key>
                 <true/>
             </dict>
         </dict>
