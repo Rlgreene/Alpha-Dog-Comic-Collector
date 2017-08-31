@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E04D6BD1F5850A90059DBAB /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E04D6BC1F5850A90059DBAB /* AFNetworking.framework */; };
+		0E04D6BE1F5850A90059DBAB /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E04D6BC1F5850A90059DBAB /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E04D6C01F5850C50059DBAB /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E04D6BF1F5850C50059DBAB /* SwiftyJSON.framework */; };
+		0E04D6C11F5850C50059DBAB /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E04D6BF1F5850C50059DBAB /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E4997B71F562BE200555F6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4997B61F562BE200555F6A /* AppDelegate.swift */; };
 		0E4997BC1F562BE200555F6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4997BA1F562BE200555F6A /* Main.storyboard */; };
 		0E4997BE1F562BE200555F6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E4997BD1F562BE200555F6A /* Assets.xcassets */; };
 		0E4997C11F562BE200555F6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4997BF1F562BE200555F6A /* LaunchScreen.storyboard */; };
 		0E4997C91F562CF800555F6A /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0E4997C81F562CF800555F6A /* Cartfile */; };
-		0E4997CC1F562E9B00555F6A /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4997CB1F562E9B00555F6A /* AFNetworking.framework */; };
 		0E4997CE1F56310E00555F6A /* SearchNewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4997CD1F56310E00555F6A /* SearchNewTableViewController.swift */; };
-		0E4997D21F57027500555F6A /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4997CB1F562E9B00555F6A /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0E4997D91F570FE600555F6A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4997D81F570FE600555F6A /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +26,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0E4997D21F57027500555F6A /* AFNetworking.framework in Embed Frameworks */,
+				0E04D6C11F5850C50059DBAB /* SwiftyJSON.framework in Embed Frameworks */,
+				0E04D6BE1F5850A90059DBAB /* AFNetworking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,6 +35,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E04D6BC1F5850A90059DBAB /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		0E04D6BF1F5850C50059DBAB /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		0E4997B31F562BE200555F6A /* Alpha Dog Comic Collector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alpha Dog Comic Collector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4997B61F562BE200555F6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E4997BB1F562BE200555F6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,9 +45,7 @@
 		0E4997C21F562BE200555F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E4997C81F562CF800555F6A /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		0E4997CA1F562D2400555F6A /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
-		0E4997CB1F562E9B00555F6A /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = "<group>"; };
 		0E4997CD1F56310E00555F6A /* SearchNewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNewTableViewController.swift; sourceTree = "<group>"; };
-		0E4997D81F570FE600555F6A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E4997CC1F562E9B00555F6A /* AFNetworking.framework in Frameworks */,
+				0E04D6C01F5850C50059DBAB /* SwiftyJSON.framework in Frameworks */,
+				0E04D6BD1F5850A90059DBAB /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,12 +64,13 @@
 		0E4997AA1F562BE200555F6A = {
 			isa = PBXGroup;
 			children = (
+				0E04D6BF1F5850C50059DBAB /* SwiftyJSON.framework */,
+				0E04D6BC1F5850A90059DBAB /* AFNetworking.framework */,
 				0E4997CA1F562D2400555F6A /* bridge.h */,
-				0E4997D81F570FE600555F6A /* SwiftyJSON.swift */,
-				0E4997CB1F562E9B00555F6A /* AFNetworking.framework */,
 				0E4997C81F562CF800555F6A /* Cartfile */,
 				0E4997B51F562BE200555F6A /* Alpha Dog Comic Collector */,
 				0E4997B41F562BE200555F6A /* Products */,
+				0E4997DB1F57A41E00555F6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +93,13 @@
 				0E4997C21F562BE200555F6A /* Info.plist */,
 			);
 			path = "Alpha Dog Comic Collector";
+			sourceTree = "<group>";
+		};
+		0E4997DB1F57A41E00555F6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +177,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E4997D91F570FE600555F6A /* SwiftyJSON.swift in Sources */,
 				0E4997CE1F56310E00555F6A /* SearchNewTableViewController.swift in Sources */,
 				0E4997B71F562BE200555F6A /* AppDelegate.swift in Sources */,
 			);
@@ -300,8 +310,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "Alpha Dog Comic Collector/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Greene.Alpha-Dog-Comic-Collector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -319,8 +331,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "Alpha Dog Comic Collector/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Greene.Alpha-Dog-Comic-Collector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +362,7 @@
 				0E4997C71F562BE200555F6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
