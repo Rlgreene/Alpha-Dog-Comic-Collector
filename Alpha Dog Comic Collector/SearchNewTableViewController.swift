@@ -8,11 +8,19 @@
 
 import UIKit
 
-class SearchNewTableViewController: UITableViewController {
+class SearchNewTableViewController: UITableViewController, UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        for subview in self.tableView.subviews {
+            subview.removeFromSuperview()
+        }
+        searchBar.resignFirstResponder()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
         let manager = AFHTTPSessionManager()
         
         let searchParameters:[String:Any] = ["method": "comicvine.issues.search",
@@ -32,6 +40,7 @@ class SearchNewTableViewController: UITableViewController {
         }) { (operation:URLSessionDataTask?, error:Error) in
             print("Error: " + error.localizedDescription)
         }
+        */
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
