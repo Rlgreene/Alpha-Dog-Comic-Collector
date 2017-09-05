@@ -11,14 +11,13 @@ import UIKit
 class SearchNewTableViewController: UITableViewController, UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        for subview in self.tableView.subviews {
-            subview.removeFromSuperview()
-        }
+        print("Search bar button clicked")
         searchBar.resignFirstResponder()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         /*
         let manager = AFHTTPSessionManager()
