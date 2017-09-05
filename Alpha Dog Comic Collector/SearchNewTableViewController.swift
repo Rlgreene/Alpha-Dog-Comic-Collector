@@ -19,17 +19,17 @@ class SearchNewTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         
-        /*
+        
         let manager = AFHTTPSessionManager()
         
-        let searchParameters:[String:Any] = ["method": "comicvine.issues.search",
-                                              "api_key": "6121b778a49a69f39054e929a1b6d89d74d74e10",
+        let searchParameters:[String:Any] = ["method": "marvel.comics.search",
+                                              "api_key": "3e72c9cff900f6c36de7924b3f70038c",
                                               "format": "json",
                                               "nojsoncallback": 1,
-                                              "text": "Moon Knight #1",
+                                              "text": "Spiderman",
                                               "extras": "url_m",
                                               "per_page": 10]
-        manager.get("https://comicvine.gamespot.com/api/", parameters: searchParameters,
+        manager.get("https://gateway.marvel.com:443/v1/public/comics?By=title", parameters: searchParameters,
                     progress: nil,
                     success: { (operation: URLSessionDataTask, responseObject:Any?) in
                         if let responseObject = responseObject as? [String:AnyObject] {
@@ -39,7 +39,7 @@ class SearchNewTableViewController: UITableViewController, UISearchBarDelegate {
         }) { (operation:URLSessionDataTask?, error:Error) in
             print("Error: " + error.localizedDescription)
         }
-        */
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
