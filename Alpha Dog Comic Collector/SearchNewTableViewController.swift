@@ -8,8 +8,22 @@
 
 import UIKit
 
+
+
+func MD5(_ string: String) -> String? {
+    let length = Int(CC_MD5_DIGEST_LENGTH)
+    var digest = [UInt8](repeating: 0, count: length)
+    if let d = string.data(using: String.Encoding.utf8) {
+        _ = d.withUnsafeBytes { (body: UnsafePointer<UInt8>) in CC_MD5(body, CC_LONG(d.count), &digest) } }
+    return (0..<length).reduce("") { $0 + String(format: "%02x", digest[$1]) }
+
+}
+
 class SearchNewTableViewController: UITableViewController, UISearchBarDelegate {
+ 
+    @IBOutlet var comictitle: UITableView!
     
+    var titles: [String]?
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("Search bar button clicked")
         searchBar.resignFirstResponder()
@@ -18,23 +32,36 @@ class SearchNewTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMddHHmmss"
+        let timeStampString = formatter.string(from: Date() as Date)
+        let privateKey = "3b4b700552379e522aef7628a9d6f86d38492027" as String
+        let publicKey = "3e72c9cff900f6c36de7924b3f70038c" as String
+        let hash = MD5(timeStampString + privateKey + publicKey)
         
         
         let manager = AFHTTPSessionManager()
         
-        let searchParameters:[String:Any] = ["method": "marvel.comics.search",
-                                              "api_key": "3e72c9cff900f6c36de7924b3f70038c",
-                                              "format": "json",
-                                              "nojsoncallback": 1,
-                                              "text": "Spiderman",
-                                              "extras": "url_m",
-                                              "per_page": 10]
-        manager.get("https://gateway.marvel.com:443/v1/public/comics?By=title", parameters: searchParameters,
+        let searchParameters:[String:Any] = [ "apikey": "3e72c9cff900f6c36de7924b3f70038c",
+                                              "hash": hash!,
+                                              "ts": timeStampString
+                                              //"title": ""
+            
+                                              ]
+        self.titles = [String]()
+        
+        manager.get("https://gateway.marvel.com/v1/public/comics", parameters: searchParameters,
                     progress: nil,
                     success: { (operation: URLSessionDataTask, responseObject:Any?) in
                         if let responseObject = responseObject as? [String:AnyObject] {
                             print("Response: " + (responseObject as AnyObject).description)
-                        
+                            let results = (responseObject["data"]?["results"] as? [[String: AnyObject]])
+                            for comic in results!{
+                                self.titles?.append(comic ["title"] as! String)
+                            }
+                            print(self.titles?.count ?? 0)
+                            self.comictitle.reloadData()
+                            
                         }
         }) { (operation:URLSessionDataTask?, error:Error) in
             print("Error: " + error.localizedDescription)
@@ -57,23 +84,24 @@ class SearchNewTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.titles!.count
+        
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchResults", for: indexPath)
+            cell.textLabel?.text = self.titles?[indexPath.row]
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -121,3 +149,4 @@ class SearchNewTableViewController: UITableViewController, UISearchBarDelegate {
     */
 
 }
+

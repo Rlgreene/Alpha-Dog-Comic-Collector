@@ -40,6 +40,9 @@
                             <outlet property="delegate" destination="34n-Nl-Aqj" id="qno-q8-bVe"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="comictitle" destination="Ato-n0-Svd" id="mbW-eX-ean"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wG-0j-X9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

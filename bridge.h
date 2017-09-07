@@ -8,6 +8,6 @@
 
 #ifndef bridge_h
 #define bridge_h
-
+#import <CommonCrypto/CommonCrypto.h>
 #import "AFNetworking/AFNetworking.h"
 #endif /* bridge_h */
